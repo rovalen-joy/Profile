@@ -1,0 +1,55 @@
+/* global style */
+body{
+    margin: 0;
+    font-family: Arial, san-serif;
+}
+
+/* about */
+.about-section {
+    padding: 60px 20px;
+    background-color:rgb(255, 255, 255); 
+    text-align: center;
+}
+
+.about-container {
+    max-width: 800px;
+    margin: 0 auto; 
+    text-align: left;
+}
+
+.about-container h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.about-container .about-text {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.read-more-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 15px;
+    display: inline-block;
+}
+
+.read-more-btn:hover {
+    background-color: #0056b3;
+}
+
+.more-text {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-top: 20px;
+}

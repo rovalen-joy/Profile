@@ -7,6 +7,7 @@
     <link rel="icon" href="favicon.png" type="image/png">
     <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="about.css">
 </head>
 <body>
     <!-- Navbar -->
@@ -42,7 +43,29 @@
                 <a href="Resume.pdf" class="download-btn" download>Download Resumé </a>
             </div>
         </div>
-
      </section>
+
+    <!--About -->
+    <section id="About" class="about-section">
+        <div class="about-container">
+            <h2>About Me</h2>
+            <p class="about-text">
+                Hi, I'm Rovalen Joy Calaguing, but you can call me Rov. I'm a 4th-year Computer Science student majoring in Artificial Intelligence at West Visayas State University. My passion lies in solving problems, creating innovative solutions, and exploring the ever-evolving world of technology.
+            </p>
+            <div class="more-text" style="display: none;">
+                <p>
+                    When I’m not in front of a screen debugging or building something new, you’ll probably find me indulging in one of my hobbies. I enjoy photography—it’s my way of appreciating the little details in life—and I also love playing video games, which keeps me sharp and competitive (and let’s face it, it’s just fun!!!).
+                </p>
+                <p>
+                    I’m always eager to learn, grow, and challenge myself, whether it’s by picking up new skills or collaborating on exciting projects. At the end of the day, I’m just someone who’s passionate about creating, exploring, and finding joy in the journey.
+                </p>
+                <button class="read-more-btn read-less" onclick="toggleAbout()">Read Less</button>
+            </div>
+            <button class="read-more-btn read-more" onclick="toggleAbout()">Read More</button>
+        </div>
+    </section>
+
+    <!--JS -->
+    <script src="about.js"></script>
 </body>
 </html>
