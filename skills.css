@@ -1,0 +1,121 @@
+/* skills */
+.skills-section {
+    padding: 60px 20px;
+    background-color:rgb(255, 255, 255);
+    text-align: center;
+  }
+  
+  .skills-container {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .skills-container h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+  }
+  
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+  }
+
+  .skill-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.07);
+    padding: 20px;
+    text-align: left; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .skill-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
+  }
+
+  .skill-card h3 {
+    font-size: 1.2rem;
+    color: #007bff; 
+    margin-bottom: 10px;.skills-section {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.skills-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.skills-container h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.skill-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.07);
+  padding: 20px;
+  text-align: left; 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
+}
+
+.skill-card h3 {
+  font-size: 1.2rem;
+  color: #007bff; 
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
+  border-bottom: 2px solid #007bff;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.skill-card ul {
+  list-style: disc;
+  padding-left: 20px;
+  margin-top: 15px;
+  margin-bottom: 0;
+}
+
+.skill-card li {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 5px;
+}
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid #007bff;
+    display: inline-block;
+    padding-bottom: 5px;
+  }
+  
+  .skill-card ul {
+    list-style: disc;
+    padding-left: 20px;
+    margin-top: 15px;
+    margin-bottom: 0;
+  }
+  
+  .skill-card li {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 5px;
+  }
