@@ -53,3 +53,112 @@ body{
     line-height: 1.6;
     margin-top: 20px;
 }
+
+/* education */
+.education-section {
+    padding: 40px 20px;
+    background-color: #fff;
+    text-align: center;
+  }
+  
+  .education-section h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+    text-align: left;
+  }
+  
+  /* timeline container */
+  .timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  /* vertical timeline line */
+  .timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    background: #007bff;
+    transform: translateX(-50%);
+  }
+  
+  .timeline-item {
+    padding: 20px 40px;
+    position: relative;
+    width: 50%;
+    box-sizing: border-box;
+  }
+  
+  /* alternate positioning  */
+  .timeline-item:nth-child(odd) {
+    left: 0;
+    text-align: right;
+  }
+  
+  .timeline-item:nth-child(even) {
+    left: 50%;
+    text-align: left;
+  }
+  
+  /* connector circle  */
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    top: 25px;
+    width: 14px;
+    height: 14px;
+    background: #007bff;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  
+  .timeline-item:nth-child(odd)::before {
+    right: -7px;
+  }
+  
+  .timeline-item:nth-child(even)::before {
+    left: -7px;
+  }
+  
+  .timeline-content {
+    background: #f9f9f9;
+    padding: 15px 20px;
+    border-radius: 6px;
+    position: relative;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  }
+  
+  .timeline-content h4 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #007bff;
+  }
+  
+  .timeline-content .institution {
+    display: block;
+    font-size: 1rem;
+    color: #555;
+    margin: 5px 0;
+  }
+  
+  .timeline-content p {
+    margin: 10px 0;
+    color: #555;
+    font-size: 0.95rem;
+  }
+  
+  .timeline-content .year {
+    display: block;
+    margin-top: 10px;
+    font-style: italic;
+    color: #333;
+    font-weight: bold;
+  }
