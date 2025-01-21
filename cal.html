@@ -245,29 +245,40 @@
 
   <!-- Contact -->
   <section id="Contact" class="contact-section">
-    <div class="contact-container">
-      <h2>Contact Me</h2>
-      <p class="contact-intro">I’d love to hear from you! Please fill out the form below, and I’ll get back to you as soon as possible.</p>
+    <div class="contact-wrapper">
+      <div class="contact-socials">
+        <h2>Let’s connect!</h2>
+        <p>Have a project or idea? I’d love to hear from you!</p>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/rovalen.joy/" target="_blank" aria-label="Facebook" class="social-icon">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://github.com/rovalen-joy" target="_blank" aria-label="GitHub" class="social-icon">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/rovalen-joy-calaguing-ab0345343/" target="_blank" aria-label="LinkedIn" class="social-icon">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </div>
+      </div>
+  
+      <!-- Contact Form -->
       <div class="contact-form-wrapper">
-        <form class="contact-form">
+        <form class="contact-form" action="https://formspree.io/f/{your_form_id}" method="POST">
           <div class="form-group">
-            <label for="full-name">Full Name</label>
-            <input type="text" id="full-name" name="full-name" placeholder="Enter your full name">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
           </div>
           <div class="form-group">
-            <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" placeholder="Enter your email">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
           </div>
           <div class="form-group">
-            <label for="subject">Subject</label>
-            <input type="text" id="subject" name="subject" placeholder="Enter the subject">
-          </div>
-          <div class="form-group">
-            <label for="message">Your Message</label>
-            <textarea id="message" name="message" rows="5" placeholder="Write your message"></textarea>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" placeholder="Write your message" required></textarea>
           </div>
           <div class="form-actions">
-            <button type="submit" class="send-btn">Send Message</button>
+            <button type="submit" class="send-btn">Send</button>
           </div>
         </form>
       </div>

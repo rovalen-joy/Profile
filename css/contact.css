@@ -1,102 +1,136 @@
-body{
-    margin: 0;
-    font-family: Arial, san-serif;
-}
-
 /* contact */
 .contact-section {
     padding: 60px 20px;
-    background-color:rgb(255, 255, 255); 
-}
-
-.contact-container {
-    max-width: 600px; 
+    background-color: #fff;
+  }
+  
+  .contact-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
     margin: 0 auto;
-    text-align: center;
-}
-
-.contact-container h2 {
-    font-size: 2rem;
-    color: #333;
+    gap: 40px;
+  }
+  
+  .contact-socials {
+    flex: 1;
+    text-align: left;
+  }
+  
+  .contact-socials h2 {
+    font-size: 1.8rem;
+    color: #004085;
     margin-bottom: 10px;
-}
-
-.contact-container .contact-intro {
+  }
+  
+  .contact-socials p {
     font-size: 1rem;
     color: #555;
-    margin-bottom: 30px;
-    line-height: 1.6;
-}
-
-.contact-form-wrapper {
-    background-color: #fff;
+    margin-bottom: 20px;
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .social-icons .social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border: 2px solid #f5a623;
+    border-radius: 50%;
+    color: #004085;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+  }
+  
+  .social-icons .social-icon:hover {
+    background-color: #f5a623;
+    color: #fff;
+    transform: scale(1.1);
+  }
+  
+  .contact-form-wrapper {
+    flex: 1;
+    background-color: #fdfdfd;
     padding: 30px;
-    border-radius: 16px; 
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); 
-    overflow: hidden; 
-}
-
-.contact-form {
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact-form {
     display: flex;
     flex-direction: column;
-    gap: 20px; 
-}
-
-.contact-form .form-group {
-    width: 100%;
-    text-align: left;
-}
-
-.contact-form label {
-    display: block;
+    gap: 20px;
+  }
+  
+  .contact-form .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .contact-form .form-group label {
     font-size: 1rem;
-    color: #333;
-    margin-bottom: 5px;
+    color: #004085;
     font-weight: bold;
-}
-
-.contact-form input,
-.contact-form textarea {
-    width: 100%; 
+    margin-bottom: 5px;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
     padding: 12px 15px;
     font-size: 1rem;
     border: 1px solid #ddd;
-    border-radius: 8px; 
-    outline: none;
-    transition: all 0.3s ease;
-    background-color: #fafafa;
-    box-sizing: border-box;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-    border-color: #007bff; 
-    background-color: #fff;
-    box-shadow: 0 0 6px rgba(0, 123, 255, 0.2); 
-}
-
-.contact-form textarea {
-    resize: none; 
-}
-
-.contact-form .form-actions {
+    border-radius: 8px;
+    background-color: #f8f9fa;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    border-color: #f5a623;
+    box-shadow: 0 0 8px rgba(245, 166, 35, 0.3);
+  }
+  
+  .contact-form textarea {
+    resize: none;
+  }
+  
+  .form-actions {
     text-align: center;
-}
-
-.send-btn {
-    display: inline-block;
-    padding: 12px 25px;
+  }
+  
+  .send-btn {
+    padding: 12px 24px; 
     font-size: 1rem;
     color: #fff;
-    background-color: #007bff;
+    background-color: #f5a623;
     border: none;
-    border-radius: 50px; 
+    border-radius: 50px;
     cursor: pointer;
     transition: all 0.3s ease;
-}
-
-.send-btn:hover {
-    background-color: #0056b3;
-    transform: translateY(-2px); 
-    box-shadow: 0 4px 10px rgba(0, 91, 187, 0.2); 
-}
+  }
+  
+  .send-btn:hover {
+    background-color: #d4881f;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(212, 136, 31, 0.2);
+  }
+  
+  /* responsiveness */
+  @media (max-width: 768px) {
+    .contact-wrapper {
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    .contact-socials,
+    .contact-form-wrapper {
+      flex: 1 1 100%;
+    }
+  }
+  
