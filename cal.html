@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rovalen Joy Calaguing</title>
-  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="icon" href="img/favicon.png" type="image/png">
   <link rel="stylesheet" href="css/navbar.css">
   <link rel="stylesheet" href="css/home.css">
   <link rel="stylesheet" href="css/about.css">
@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="css/project.css">
   <link rel="stylesheet" href="css/contact.css">
   <link rel="stylesheet" href="css/footer.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 <body>
   <!-- Navbar -->
@@ -19,7 +20,7 @@
     <div class="navbar-container">
       <!-- Logo -->
       <a href="#" class="navbar-logo">
-        <img src="logo.png" alt="Logo">
+        <img src="img/logo.png" alt="Logo">
       </a>
   
       <!-- Navigation Links -->
@@ -35,17 +36,39 @@
 
   <!-- Home -->
   <section id="Home" class="home-section">
-    <div class="home-container">
-      <div class="home-image">
-        <img scr="" alt="insert my picture">
+    <div class="home-wrapper">
+      <div class="background">
+        <img src="img/home_bg.png" alt="Background Image" class="background-img">
       </div>
-      <div class="home-text">
-        <h1>Hi there! I'm Rovalen Joy</h1>
-        <p class="subtitle">Exploring, coding, and growing every day.</p>
-        <a href="Resume.pdf" class="download-btn" download>Download Resumé</a>
+      <div class="home-container">
+        <div class="home-image">
+          <img src="img/me_home.png" alt="Rovalen Joy Cartoon">
+        </div>
+  
+        <div class="home-content">
+          <h1>Hi there! I’m <span class="highlight">Rovalen Joy</span></h1>
+          <p class="home-subtitle">exploring, coding, and growing every day.</p>
+  
+          <!-- Social Media -->
+          <div class="social-icons">
+            <a href="https://www.facebook.com/rovalen.joy/" target="_blank" aria-label="Facebook" class="social-icon">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://github.com/rovalen-joy" target="_blank" aria-label="GitHub" class="social-icon">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/rovalen-joy-calaguing-ab0345343/" target="_blank" aria-label="LinkedIn" class="social-icon">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </div>
+  
+          <!-- Download Resume Button -->
+          <a href="Resume.pdf" class="download-btn" download>Download CV</a>
+        </div>
       </div>
     </div>
   </section>
+  
 
   <!-- About -->
   <section id="About" class="about-section">
