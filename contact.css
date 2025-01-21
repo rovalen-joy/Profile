@@ -7,24 +7,44 @@ body{
 .contact-section {
     padding: 60px 20px;
     background-color:rgb(255, 255, 255); 
-    text-align: center;
 }
 
 .contact-container {
-    max-width: 800px;
+    max-width: 600px; 
     margin: 0 auto;
-    text-align: left;
+    text-align: center;
 }
 
 .contact-container h2 {
     font-size: 2rem;
     color: #333;
+    margin-bottom: 10px;
+}
+
+.contact-container .contact-intro {
+    font-size: 1rem;
+    color: #555;
     margin-bottom: 30px;
-    text-align: left; 
+    line-height: 1.6;
+}
+
+.contact-form-wrapper {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 16px; 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); 
+    overflow: hidden; 
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; 
 }
 
 .contact-form .form-group {
-    margin-bottom: 20px;
+    width: 100%;
+    text-align: left;
 }
 
 .contact-form label {
@@ -32,27 +52,35 @@ body{
     font-size: 1rem;
     color: #333;
     margin-bottom: 5px;
+    font-weight: bold;
 }
 
 .contact-form input,
 .contact-form textarea {
-    width: 100%;
-    padding: 10px 15px;
+    width: 100%; 
+    padding: 12px 15px;
     font-size: 1rem;
     border: 1px solid #ddd;
     border-radius: 8px; 
     outline: none;
-    transition: border-color 0.3s ease;
-    
+    transition: all 0.3s ease;
+    background-color: #fafafa;
+    box-sizing: border-box;
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-    border-color: #007bff;
+    border-color: #007bff; 
+    background-color: #fff;
+    box-shadow: 0 0 6px rgba(0, 123, 255, 0.2); 
 }
 
 .contact-form textarea {
     resize: none; 
+}
+
+.contact-form .form-actions {
+    text-align: center;
 }
 
 .send-btn {
@@ -62,12 +90,13 @@ body{
     color: #fff;
     background-color: #007bff;
     border: none;
-    border-radius: 8px; 
+    border-radius: 50px; 
     cursor: pointer;
-    transition: background-color 0.3s ease;
-    text-align: center;
+    transition: all 0.3s ease;
 }
 
 .send-btn:hover {
     background-color: #0056b3;
+    transform: translateY(-2px); 
+    box-shadow: 0 4px 10px rgba(0, 91, 187, 0.2); 
 }
