@@ -1,164 +1,175 @@
-/* global style */
-body{
-    margin: 0;
-    font-family: Arial, san-serif;
-}
-
-/* about */
+/* about  */
 .about-section {
-    padding: 60px 20px;
-    background-color:rgb(255, 255, 255); 
-    text-align: center;
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 
 .about-container {
-    max-width: 800px;
-    margin: 0 auto; 
-    text-align: left;
+  max-width: 1200px;
+  margin-left: auto; 
+  margin-right: 0;
+  
+  display: flex;
+  gap: 40px;
+  align-items: center; 
 }
 
-.about-container h2 {
-    font-size: 2rem;
-    color: #333;
-    margin-bottom: 20px;
+.about-left {
+  flex: 0 0 auto;
+}
+.about-image {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
-.about-container .about-text {
-    font-size: 1rem;
-    color: #555;
-    line-height: 1.6;
-    margin-bottom: 20px;
+.about-right {
+  flex: 1 1 auto;
 }
 
-.read-more-btn {
-    padding: 10px 20px;
-    font-size: 1rem;
-    color: #fff;
-    background-color: #007bff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin-top: 15px;
-    display: inline-block;
+.about-title {
+  font-size: 3rem;
+  color: #004085;
+  margin-bottom: 20px;
 }
 
-.read-more-btn:hover {
-    background-color: #0056b3;
+.about-right p {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 40px;
 }
 
-.more-text {
-    font-size: 1rem;
-    color: #555;
-    line-height: 1.6;
-    margin-top: 20px;
+/* Education */
+.section-title {
+  font-size: 2rem;
+  color: #004085;
+  margin-bottom: 20px;
 }
 
-/* education */
-.education-section {
-    padding: 40px 20px;
-    background-color: #fff;
-    text-align: center;
-  }
+.education-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+.education-year {
+  display: inline-block;
+  width: 130px;
+  font-size: 1.1rem;
+  color: #555;
+}
+.education-item h4 {
+  font-size: 1.2rem;
+  color: #004085;
+  margin: 0;
+}
+.institution {
+  font-size: 1rem;
+  color: #f5a623;
+}
+
+.achievements-hobbies-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* Achievements */
+.achievements-section {
+  text-align: left;
+}
+
+.achievements-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; 
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  background: #fff;
+  border: 2px solid #f5a623;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.achievement-item {
+  flex: 1 1 auto;
+  text-align: center;
+  color: #555;
+}
+
+.achievement-item i {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+/* Medal colors */
+.gold {
+  color: gold;
+}
+.silver {
+  color: silver;
+}
+.bronze {
+  color: #cd7f32;
+}
+
+.achievement-item p span {
+  color: #f5a623;
+  font-size: 0.9rem;
+}
+
+/* --- Hobbies --- */
+.hobbies-section {
+  text-align: left;
+}
+
+.hobbies-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; 
+  align-items: center;
+  gap: 20px;
+}
+
+.hobby-card {
+  flex: 1 1 auto;  
+  min-width: 130px;  
+  max-width: 200px;  
   
-  .education-section h2 {
-    font-size: 2rem;
-    color: #333;
-    margin-bottom: 40px;
-    letter-spacing: 1px;
-    text-align: left;
-  }
-  
-  /* timeline container */
-  .timeline {
-    position: relative;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
-  
-  /* vertical timeline line */
-  .timeline::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    width: 2px;
-    background: #007bff;
-    transform: translateX(-50%);
-  }
-  
-  .timeline-item {
-    padding: 20px 40px;
-    position: relative;
-    width: 50%;
-    box-sizing: border-box;
-  }
-  
-  /* alternate positioning  */
-  .timeline-item:nth-child(odd) {
-    left: 0;
-    text-align: right;
-  }
-  
-  .timeline-item:nth-child(even) {
-    left: 50%;
-    text-align: left;
-  }
-  
-  /* connector circle  */
-  .timeline-item::before {
-    content: '';
-    position: absolute;
-    top: 25px;
-    width: 14px;
-    height: 14px;
-    background: #007bff;
-    border: 3px solid #fff;
-    border-radius: 50%;
-    z-index: 1;
-  }
-  
-  .timeline-item:nth-child(odd)::before {
-    right: -7px;
-  }
-  
-  .timeline-item:nth-child(even)::before {
-    left: -7px;
-  }
-  
-  .timeline-content {
-    background: #f9f9f9;
-    padding: 15px 20px;
-    border-radius: 6px;
-    position: relative;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  }
-  
-  .timeline-content h4 {
-    margin: 0;
-    font-size: 1.2rem;
-    color: #007bff;
-  }
-  
-  .timeline-content .institution {
-    display: block;
-    font-size: 1rem;
-    color: #555;
-    margin: 5px 0;
-  }
-  
-  .timeline-content p {
-    margin: 10px 0;
-    color: #555;
-    font-size: 0.95rem;
-  }
-  
-  .timeline-content .year {
-    display: block;
-    margin-top: 10px;
-    font-style: italic;
-    color: #333;
-    font-weight: bold;
-  }
+  height: 130px;
+  border: 2px solid #f5a623;
+  border-radius: 10px;
+  background: #fff;
+  text-align: center;
+  color: #555;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  transition: transform 0.3s ease;
+  margin-left: 5px;
+}
+
+.hobby-card:hover {
+  transform: scale(1.1);
+}
+
+.hobby-card i {
+  font-size: 2rem;
+  color: #f5a623;
+  margin-bottom: 5px;
+}
+
+.hobby-card p {
+  margin: 0;
+  font-size: 1rem;
+}
