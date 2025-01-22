@@ -2,6 +2,10 @@
 .contact-section {
   padding: 60px 20px;
   background-color: #fff;
+  background-image: url('../img/contact_bg.png'); 
+  background-size: cover;        
+  background-position: center;  
+  background-repeat: no-repeat; 
 }
 
 .contact-wrapper {
@@ -18,9 +22,9 @@
   text-align: left;
 }
 
-.contact-socials h2 {
+.contact-socials h1 {
   font-family: 'Itim', cursive;
-  font-size: 1.8rem;
+  font-size: 3rem;
   color: #004085;
   margin-bottom: 10px;
 }
