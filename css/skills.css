@@ -1,121 +1,241 @@
-/* skills */
+/*****************************
+  Skills Section
+*****************************/
 .skills-section {
-    padding: 60px 20px;
-    background-color:rgb(255, 255, 255);
-    text-align: center;
-  }
-  
-  .skills-container {
-    max-width: 1000px;
-    margin: 0 auto;
-  }
-  
-  .skills-container h2 {
-    font-size: 2rem;
-    color: #333;
-    margin-bottom: 40px;
-    letter-spacing: 1px;
-  }
-  
-  .skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
-  }
-
-  .skill-card {
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.07);
-    padding: 20px;
-    text-align: left; 
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .skill-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
-  }
-
-  .skill-card h3 {
-    font-size: 1.2rem;
-    color: #007bff; 
-    margin-bottom: 10px;.skills-section {
   padding: 60px 20px;
   background-color: #f9f9f9;
   text-align: center;
 }
 
 .skills-container {
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
-.skills-container h2 {
-  font-size: 2rem;
+/* Main heading */
+.main-title {
+  font-size: 2.2rem;
   color: #333;
-  margin-bottom: 40px;
+  margin-bottom: 60px;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
 
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
+/* We'll have two row-wrappers (like 2 horizontal rows of cards) */
+.row-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 50px;
+  justify-content: center;
 }
 
-.skill-card {
+/*********************************
+   Common Card Styles
+*********************************/
+.card-languages,
+.card-frameworks,
+.card-radial,
+.card-tools {
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.07);
-  padding: 20px;
-  text-align: left; 
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 20px 25px;
+  flex: 1 1 350px; /* min width: 350px */
+  max-width: 550px; /* optional max width */
+  text-align: left;
 }
 
-.skill-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
-}
-
-.skill-card h3 {
-  font-size: 1.2rem;
-  color: #007bff; 
-  margin-bottom: 10px;
+.card-title {
+  font-size: 1.5rem;
+  color: #007bff;
+  margin-bottom: 20px;
+  text-transform: uppercase;
   letter-spacing: 0.5px;
   border-bottom: 2px solid #007bff;
   display: inline-block;
   padding-bottom: 5px;
 }
 
-.skill-card ul {
-  list-style: disc;
-  padding-left: 20px;
-  margin-top: 15px;
-  margin-bottom: 0;
+/*********************************
+   Programming Language Progress Bars
+*********************************/
+.progress-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
-.skill-card li {
-  font-size: 0.95rem;
+.progress-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.language-name {
+  width: 80px; 
+  font-weight: 600;
+  color: #444;
+}
+
+.progress-bar {
+  flex: 1;
+  height: 10px;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-fill {
+  background-color: #007bff;
+  height: 100%;
+  border-radius: 5px;
+  transition: width 0.6s ease;
+}
+
+.percent-label {
+  width: 40px;
+  text-align: right;
+  font-weight: 600;
+  color: #666;
+}
+
+/*********************************
+   Frameworks & Libraries (icons)
+*********************************/
+.frameworks-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.framework-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70px;
+  gap: 5px;
+  transition: transform 0.3s;
+}
+
+.framework-card i {
+  font-size: 2.4rem;
+  color: #007bff;
+}
+
+.framework-card p {
+  font-size: 0.9rem;
+  font-weight: 600;
   color: #555;
+}
+
+.framework-card:hover {
+  transform: translateY(-5px);
+}
+
+/*********************************
+   Radial / Circular Skills
+**********************************/
+.card-radial {
+  position: relative;
+}
+
+.radial-wrapper {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.radial-skill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100px;
+  position: relative;
+}
+
+/* We pass skill level as a custom prop: --skill-percent: 75; etc. */
+.radial-skill {
+  --skill-percent: 0; /* fallback if none set */
+}
+.radial-skill .circle-outer {
+  width: 90px;
+  height: 90px;
+  border: 8px solid #e0e0e0; 
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.radial-skill .circle-inner {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  position: absolute;
+  clip: rect(0, 90px, 90px, 45px);
+  transform: rotate(-90deg);
+  border: 8px solid #007bff;
+  border-right-color: transparent;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+  /* rotate circle according to the skill-percent.  */
+  transform: rotate(calc((var(--skill-percent) * 360deg)/100 - 90deg));
+}
+
+.skill-value {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #007bff;
+}
+
+.radial-label {
+  margin-top: 8px;
+  font-size: 0.85rem;
+  text-align: center;
+  color: #555;
+  font-weight: 600;
+}
+
+/*********************************
+   Tools / IDE & Computer Software
+**********************************/
+.card-tools ul {
+  list-style: disc;
+  margin-left: 20px;
+  margin-top: 10px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.soft-logos {
+  display: flex;
+  gap: 15px;
+  margin-top: 5px;
+  flex-wrap: wrap;
+}
+
+.soft-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60px;
+  text-align: center;
+}
+.soft-item i {
+  font-size: 2.2rem;
+  color: #007bff;
   margin-bottom: 5px;
 }
-    letter-spacing: 0.5px;
-    border-bottom: 2px solid #007bff;
-    display: inline-block;
-    padding-bottom: 5px;
-  }
-  
-  .skill-card ul {
-    list-style: disc;
-    padding-left: 20px;
-    margin-top: 15px;
-    margin-bottom: 0;
-  }
-  
-  .skill-card li {
-    font-size: 0.95rem;
-    color: #555;
-    margin-bottom: 5px;
-  }
+.soft-item span {
+  font-size: 0.75rem;
+  color: #444;
+  font-weight: 500;
+}
